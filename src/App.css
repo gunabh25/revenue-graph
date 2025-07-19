@@ -36,7 +36,7 @@
 
 }
 
-.cardDetails{
+.cardValues{
   display: flex;
   align-items: center;
   gap: 8px;
@@ -50,7 +50,7 @@
   border-radius: 15%;
 }
 
-.revenue-amount {
+.revenue-money {
   font-size: 2.5rem;
   font-weight: bold;
   color: #1a1a2c;
@@ -108,7 +108,7 @@
   min-width: 160px;
 }
 
-.cardTitle{
+.cardName{
   font-size: 0.9em;
     font-weight: 500;
     color: #5a5a89;

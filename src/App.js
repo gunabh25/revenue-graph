@@ -5,7 +5,7 @@ import {
 } from "recharts";
 import "./App.css";
 
-const revenueData = [
+const dummyRevenue = [
   { month: "Jan", value: 80 },
   { month: "Feb", value: 120 },
   { month: "Mar", value: 100 },
@@ -20,7 +20,7 @@ const revenueData = [
   { month: "Dec", value: 110 },
 ];
 
-const userData = [
+const monthlyUsers = [
   { month: "Jan", users: 1000 },
   { month: "Feb", users: 1300 },
   { month: "Mar", users: 5100 },
@@ -51,10 +51,10 @@ function App() {
               </svg>
             </span>
           </div>
-          <div className="revenue-amount">$682.5</div>
+          <div className="revenue-money">$682.5</div>
           <div className="chart-container">
             <ResponsiveContainer width="100%" height={150}>
-              <BarChart data={revenueData}>
+              <BarChart data={dummyRevenue}>
                 <XAxis dataKey="month" axisLine={false} tickLine={false} />
                 <YAxis hide />
                 <Tooltip />
@@ -66,7 +66,7 @@ function App() {
                   label={{ value: "$179", position: "insideRight", fill: "#222169ff", fontSize: 12, fontWeight: "bold", offset: 10 }}
                 />
                 <Bar dataKey="value" radius={[8, 8, 0, 0]}>
-                  {revenueData.map((entry, index) => (
+                  {dummyRevenue.map((entry, index) => (
                     <Cell 
                       key={`cell-${index}`} 
                       fill={entry.month === "Jun" ? "#222169ff" : "#cdcdceff"} 
@@ -97,15 +97,15 @@ function App() {
           <div className="stats-row">
             <div className="stat-card stat-card-main" style={{height: "65px", padding: "4px 2px", width:"200px"}}>
               {/* <div className="stat-label">New User Registration</div> */}
-              <div className="cardTitle">New User Registration</div>
-              <div className="cardDetails">
+              <div className="cardName">New User Registration</div>
+              <div className="cardValues">
               <div className="stat-value">4,350</div>
               <div className="stat-change positive">+2.45%</div>
               </div>
             </div>
             <div className="stat-card" style={{height: "65px", padding: "4px 2px", width:"200px"}}>
-              <div className="cardTitle">New Partner Registration</div>
-              <div className="cardDetails">
+              <div className="cardName">New Partner Registration</div>
+              <div className="cardValues">
               <div className="stat-value">102</div>
               <div className="stat-change positive">+2.45%</div>
               </div>
@@ -113,7 +113,7 @@ function App() {
           </div>
           <div className="chart-container">
             <ResponsiveContainer width="100%" height={120}>
-              <AreaChart data={userData}>
+              <AreaChart data={monthlyUsers}>
                 <defs>
                   <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#a78bfa" stopOpacity={0.8}/>
