@@ -42,7 +42,7 @@ function App() {
         {/* Revenue Card */}
         <div className="card">
           <div className="card-header">
-            <span className="card-title">Total Monthly Revenue</span>
+            <span className="card-Name">Total Monthly Revenue</span>
             <span className="card-icon">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <rect x="1" y="8" width="3" height="7" fill="#222169ff" rx="1"/>
@@ -81,8 +81,8 @@ function App() {
         <div className="card">
           <div className="card-header">
             <div className="header-content">
-            <span className="card-title">User Information</span>
-            <span className="card-status">
+            <span className="card-Name">User Information</span>
+            <span className="card-Number">
               <svg width="12" height="12" viewBox="0 0 12 12" style={{marginRight: "4px"}}>
                 <circle cx="6" cy="6" r="6" fill="#10B981"/>
                 <path d="M3.5 6L5.5 8L8.5 4.5" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
